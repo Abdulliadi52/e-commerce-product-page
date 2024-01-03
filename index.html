@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="nav">
+        <div class="nav-container">
+          <div class="nav-left">
+            <img src="images/icon-menu.svg" alt="icon-menu" id="open-btn" />
+            <img src="images/logo.svg" alt="nav-logo" />
+            <div class="overlay"></div>
+            <ul class="nav-links" id="nav-links">
+              <img
+                src="images/icon-close.svg"
+                alt="icon-close"
+                id="close-btn"
+              />
+              <li class="nav-link">Collections</li>
+              <li class="nav-link">Men</li>
+              <li class="nav-link">Women</li>
+              <li class="nav-link">About</li>
+              <li class="nav-link">Contact</li>
+            </ul>
+          </div>
+          <div class="nav-right">
+            <div class="cart-container">
+              <button class="cart-btn">
+                <span class="indicator"></span>
+                <img src="images/icon-cart.svg" alt="cart-icon" class="cart" />
+              </button>
+              <div class="cart-wrap">
+                <p class="heading">Cart</p>
+                <div class="divider"></div>
+                <div class="cart-content empty">
+                  <p>your cart is empty</p>
+                </div>
+              </div>
+            </div>
+            <img
+              src="images/image-avatar.png"
+              alt="image-avatar"
+              class="avatar"
+            />
+          </div>
+        </div>
+      </nav>
+      <main>
+        <!-- thumbnails -->
+        <section class="thumbnail">
+          <img
+            src="images/image-product-1.jpg"
+            alt="product"
+            class="main-thumbnail hidden-mobile show-lightbox"
+            id="image"
+          />
+          <div class="mobile-thumbnail hidden">
+            <img
+              src="images/image-product-1.jpg"
+              alt="product"
+              class="mob-thumbnail"
+            />
+            <button class="mob-prev">
+              <img src="images/icon-previous.svg" alt="icon-previous" />
+            </button>
+            <button class="mob-next">
+              <img src="images/icon-next.svg" alt="next-icon" />
+            </button>
+          </div>
+          <div class="previews" id="previews">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="image-product-1-thumbnail"
+              class="select img"
+              id="img-1"
+            />
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="image-product-2-thumbnail"
+              class="img"
+              id="img-2"
+            />
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="image-product-3-thumbnail"
+              class="img"
+              id="img-3"
+            />
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="image-product-4-thumbnail"
+              class="img"
+              id="img-4"
+            />
+          </div>
+        </section>
+        <section class="content">
+          <p class="company">Sneaker Company</p>
+          <p class="title">Fall Limited Edition Sneakers</p>
+          <p class="info">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price">
+            <div class="new-price">
+              <p>$125.00</p>
+              <span> 50% </span>
+            </div>
+            <p class="old-price">$250.00</p>
+          </div>
+          <div class="buttons">
+            <div class="btns">
+              <button class="btn minus" id="minus">
+                <img src="images/icon-minus.svg" alt="icon-minus" />
+              </button>
+              <p class="amount" id="amount">0</p>
+              <button class="btn plus" id="plus">
+                <img src="images/icon-plus.svg" alt="icon-plus" />
+              </button>
+            </div>
+            <button class="add-cart">
+              <img src="images/icon-cart.svg" alt="cart" />
+              Add to cart
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-container">
+        <button class="close-lightbox" id="close-lightbox">
+          <img src="images/icon-close.svg" alt="close" />
+        </button>
+        <img
+          src="images/image-product-1.jpg"
+          alt="product"
+          class="main-lightbox main2"
+        />
+        <button id="prev" class="prev">
+          <img src="images/icon-previous.svg" alt="icon-previous" />
+        </button>
+        <button id="next" class="next">
+          <img src="images/icon-next.svg" alt="next-icon" />
+        </button>
+      </div>
+      <div class="box-preview">
+        <div class="source show" id="image-1">
+          <span></span>
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="image-product-1-thumbnail"
+            class=""
+          />
+        </div>
+        <div class="source" id="image-2">
+          <span></span>
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="image-product-2-thumbnail"
+          />
+        </div>
+        <div class="source" id="image-3">
+          <span></span>
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="image-product-3-thumbnail"
+          />
+        </div>
+        <div class="source" id="image-4">
+          <span></span>
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="image-product-4-thumbnail"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
